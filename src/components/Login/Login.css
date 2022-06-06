@@ -7,8 +7,10 @@
 
 legend {
     font-size: 40px;
+    font-weight: 600;
     padding-bottom: 20px;
     color: #FF6600;
+    padding-left: 40px;
 }
 
 label {
@@ -16,7 +18,7 @@ label {
 }
 
 #password {
-    padding-right: 42px;
+    margin-right: 42px;
 }
 
 #button-sub {
