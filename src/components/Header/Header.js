@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
         <div class="col-lg-9">
@@ -10,15 +12,20 @@ const Header = () => {
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="course.html" class="nav-item nav-link">Courses</a>
-                    <a href="teacher.html" class="nav-item nav-link">Teachers</a>
-                    <div class="nav-item dropdown">
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <Link to="/home" class="nav-item nav-link active">Home</Link>
+                    <Link to="/about" class="nav-item nav-link">About</Link>
+                    <Link to="/courses" class="nav-item nav-link">Courses</Link>
+                    <Link to="/teachers" class="nav-item nav-link">Teachers</Link>
+                    <Link to="/contact" class="nav-item nav-link">Contact</Link>
                 </div>
-                <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Join Now</a>
+                <div id="guest" class="navbar-nav py-0">
+                    <Link to="/login" class="nav-item nav-link">Login</Link>
+                    <Link to="/register" class="nav-item nav-link">Register</Link>
+                </div>
+                <div id="user" class="navbar-nav py-0">
+                    <Link to="/logout" class="nav-item nav-link">Logout</Link>
+                    <Link to="/my-courses" class="nav-item nav-link">My Courses</Link>
+                </div>
             </div>
         </nav>
     </div>
