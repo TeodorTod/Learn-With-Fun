@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "./Header.css"
 
 const Header = () => {
     return (
-        <div className="col-lg-9">
+        <div className="col-lg-9" >
         <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
             <a href="" className="text-decoration-none d-block d-lg-none">
                 <h1 className="m-0"><span className="text-primary">E</span>COURSES</h1>
@@ -12,6 +13,9 @@ const Header = () => {
             </button>
             <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div className="navbar-nav py-0">
+                <Link to="/home" class="text-decoration-none">
+                    <h1 class="m-0"><span class="text-primary">LEARN</span>withFun</h1>
+                </Link>
                     <Link to="/home" className="nav-item nav-link active">Home</Link>
                     <Link to="/about" className="nav-item nav-link">About</Link>
                     <Link to="/courses" className="nav-item nav-link">Courses</Link>
