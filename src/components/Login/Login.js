@@ -1,9 +1,21 @@
 import "./Login.css";
 
 const Login = () => {
+    const submitHandler = (e) => {
+        e.preventDefault();
+
+        let formData = new FormData(e.currentTarget);
+
+        let email = formData.get('email');
+        let password = formData.get('password');
+
+        console.log(email);
+        console.log(password);
+    }
+
     return (
         <section id="login-page" className="login">
-            <form id="login-form" method="POST">
+            <form id="login-form" method="POST" onSubmit={submitHandler}>
                 <fieldset>
                     <legend>Login Form</legend>
                     <p className="field">
