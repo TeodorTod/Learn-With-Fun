@@ -13,10 +13,10 @@ const Header = () => {
             </button>
             <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div className="navbar-nav py-0">
-                <Link to="/home" className="text-decoration-none">
+                <Link to="/" className="text-decoration-none">
                     <h1 className="m-0"><span className="text-primary">LEARN</span>withFun</h1>
                 </Link>
-                    <Link to="/home" className="nav-item nav-link active">Home</Link>
+                    <Link to="/" className="nav-item nav-link active">Home</Link>
                     <Link to="/about" className="nav-item nav-link">About</Link>
                     <Link to="/courses" className="nav-item nav-link">Courses</Link>
                     <Link to="/teachers" className="nav-item nav-link">Teachers</Link>
