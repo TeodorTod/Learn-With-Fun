@@ -1,38 +1,26 @@
-import { useNavigate } from 'react-router-dom';
-import * as authService from '../../services/authService';
+import "./Register.css";
 
-import "./Login.css";
-
-const Login = ({
-    onLogin
-}) => {
-    const navigate = useNavigate();
-
+const Register = () => {
     const submitHandler = (e) => {
         e.preventDefault();
-        
+
         let formData = new FormData(e.currentTarget);
 
         let email = formData.get('email');
         let password = formData.get('password');
+        let rePass = formData.get('repeat-pass');
 
-        authService.login(email, password)
-        .then((authData) => {
-            console.log('logged');
-            console.log(authData);
-        })
-    
-    onLogin(email);
-
-        navigate('/');
+        console.log(email);
+        console.log(password);
+        console.log(rePass);
     }
 
     return (
-        <section id="login-page" className="login">
-            <form id="login-form" method="POST" onSubmit={submitHandler}>
+        <section id="register-page" className="login">
+            <form id="register-form" method="POST" onSubmit={submitHandler}>
                 <fieldset>
-                    <legend>Login Form</legend>
-                    <p className="field">
+                    <legend>Register Form</legend>
+                    <p className="  ">
                         <label htmlFor="email">Email</label>
                         <span className="input">
                             <input type="text" name="email" id="email" placeholder="Email" />
@@ -44,11 +32,17 @@ const Login = ({
                             <input type="password" name="password" id="password" placeholder="Password" />
                         </span>
                     </p>
-                    <input id="button-sub" className="button submit" type="submit" value="Login" />
+                    <p className="field">
+                        <label htmlFor="repeat-pass">Repeat Password</label>
+                        <span className="input">
+                            <input type="password" name="repeat-pass" id="repeat-pass" placeholder="Repeat Password" />
+                        </span>
+                    </p>
+                    <input id="button-sub" className="button submit" type="submit" value="Register" />
                 </fieldset>
             </form>
         </section>
     );
 }
 
-export default Login;
+export default Register;
