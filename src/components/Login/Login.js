@@ -20,11 +20,16 @@ const Login = ({
         .then((authData) => {
             console.log('logged');
             console.log(authData);
+            navigate('/');
+        })
+        .catch(err => {
+            console.log(err);
+            navigate('/login');
         })
     
     onLogin(email);
 
-        navigate('/');
+        
     }
 
     return (
