@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
-import * as authService from './services/authService';
+
+import { AuthContext } from './contexts/AuthContext';
 
 import Header from "./components/Header/Header";
 import Home from  "./components/Home/Home";
@@ -11,27 +12,22 @@ import Register from "./components/Register/Register";
 
 
 function App() {
-  const [userInfo, setUserInfo] = useState({isAuthenticated: false, username: ''});
-  
-  useEffect(() => {
-    let user = authService.getUser();
+  const [user, setUser] = useState({
+    accessToken: "",
+    email: "",
+    _id: ""
+  });
 
-    setUserInfo({
-      isAuthenticated: Boolean(user),
-      user,
-    })
+  const login = (authData) => {
+    setUser(authData);
+  }
 
-  }, []);
+  const onLogout = () => {
 
-  const onLogin = (username) => {
-
-    setUserInfo({
-      isAuthenticated: true,
-      user: username,
-    })
   }
 
   return (
+    <AuthContext.Provider value={{user, login}}>
     <div>
       <Header />
       <main>
@@ -39,14 +35,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login onLogin={onLogin} />}/>
+        <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
 
       </Routes>
       </main>
       <Footer />
     </div>
-    
+    </AuthContext.Provider>
   );
 }
 
