@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
-import "./Header.css"
+import "./Header.css";
 
 const Header = () => {
 
@@ -19,6 +19,7 @@ const Header = () => {
         <div className="navbar-nav py-0">
             <Link to="/logout" className="nav-item nav-link">Logout</Link>
             <Link to="/my-courses" className="nav-item nav-link">My Courses</Link>
+            <Link to="/add-questions" className="nav-item nav-link">Add Questions</Link>
             <span className="nav-item nav-link">Welcome, {user.email}</span>
 
         </div>

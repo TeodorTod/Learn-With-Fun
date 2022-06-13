@@ -9,6 +9,8 @@ import About from  "./components/About/About";
 import Login from  "./components/Login/Login";
 import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
+import MyCorses from './components/MyCourses/MyCourses';
+import AddQuestions from './components/AddQuestions/AddQuestions';
 
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />} />
+        <Route path="/courses" element={<MyCorses />} />
+        <Route path="/add-questions" element={<AddQuestions />} />
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
 
