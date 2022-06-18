@@ -27,7 +27,7 @@ const Header = () => {
 
     return (
         <div className="col-lg-9" >
-        <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+        <nav id="navbar" className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
             <a href="" className="text-decoration-none d-block d-lg-none">
                 <h1 className="m-0"><span className="text-primary">E</span>COURSES</h1>
             </a>
