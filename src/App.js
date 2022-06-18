@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 
 import { AuthContext } from './contexts/AuthContext';
+import './App.css';
 
 import Header from "./components/Header/Header";
 import Home from  "./components/Home/Home";
@@ -12,6 +13,7 @@ import Register from "./components/Register/Register";
 import MyCorses from './components/MyCourses/MyCourses';
 import AddQuestions from './components/AddQuestions/AddQuestions';
 import Teachers from './components/Teachers/Teachers';
+
 
 
 function App() {
@@ -33,7 +35,7 @@ function App() {
     <AuthContext.Provider value={{user, login}}>
     <div>
       <Header />
-      <main>
+      <main id='main'>
       
       <Routes>
         <Route path="/" element={<Home />}/>

@@ -1,5 +1,8 @@
+import "./Footer.css";
+
 const Footer = () => {
     return (
+        <footer>
         <div className="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5">
         <div className="row">
             <div className="col-lg-6 text-center text-md-left mb-3 mb-md-0">
@@ -8,6 +11,7 @@ const Footer = () => {
             </div>
         </div>
     </div>
+    </footer>
     );
 }
 

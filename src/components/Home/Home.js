@@ -128,43 +128,44 @@ const Home = () => {
             </div>
         </div>
     </div>
-
     <div className="container-fluid py-5">
-        <div className="container py-5">
+        <div className="container pt-5 pb-3">
             <div className="text-center mb-5">
-                <h5 className="text-primary text-uppercase mb-3" >Testimonial</h5>
-                <h1>What Say Our Students</h1>
+                <h5 className="text-primary text-uppercase mb-3">Our Blog</h5>
+                <h1>Latest From Our Blog</h1>
             </div>
-            <div className="row justify-content-center">
-                <div className="col-lg-8">
-                    <div className="owl-carousel testimonial-carousel">
-                        <div className="text-center">
-                            <i className="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 className="font-weight-normal mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img className="img-fluid mx-auto mb-3" src="img/testimonial-1.jpg" alt="" />
-                            <h5 className="m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div className="text-center">
-                            <i className="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 className="font-weight-normal mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img className="img-fluid mx-auto mb-3" src="img/testimonial-2.jpg" alt="" />
-                            <h5 className="m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div className="text-center">
-                            <i className="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 className="font-weight-normal mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img className="img-fluid mx-auto mb-3" src="img/testimonial-3.jpg" alt="" />
-                            <h5 className="m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
+            <div className="row pb-3">
+                <div className="col-lg-4 mb-4">
+                    <div className="blog-item position-relative overflow-hidden rounded mb-2">
+                        <img className="img-fluid" src="img/blog-1.jpg" alt="" />
+                        <a className="blog-overlay text-decoration-none" href="">
+                            <h5 className="text-white mb-3">Best SEO practices in 2022</h5>
+                            <p className="text-primary m-0">Jun 09, 2022</p>
+                        </a>
+                    </div>
+                </div>
+                <div className="col-lg-4 mb-4">
+                    <div className="blog-item position-relative overflow-hidden rounded mb-2">
+                        <img className="img-fluid" src="img/blog-2.jpg" alt="" />
+                        <a className="blog-overlay text-decoration-none" href="">
+                            <h5 className="text-white mb-3">How effective is the learning from home?</h5>
+                            <p className="text-primary m-0">Jul 01, 2022</p>
+                        </a>
+                    </div>
+                </div>
+                <div className="col-lg-4 mb-4">
+                    <div className="blog-item position-relative overflow-hidden rounded mb-2">
+                        <img className="img-fluid" src="img/blog-3.jpg" alt="" />
+                        <a className="blog-overlay text-decoration-none" href="">
+                            <h5 className="text-white mb-3">How old do we have to be to start programming?</h5>
+                            <p className="text-primary m-0">Jul 14, 2022</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        </div>
+</div>
     )
 }
 
