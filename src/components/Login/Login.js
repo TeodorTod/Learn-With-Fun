@@ -49,6 +49,9 @@ const Login = () => {
                         </span>
                     </p>
                     <input id="button-sub" className="button submit" type="submit" value="Login" />
+                    <p>Dont have an account?
+                        <a href="/register">Sign up</a>.
+                    </p>
                 </fieldset>
             </form>
         </section>

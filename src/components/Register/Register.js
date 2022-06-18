@@ -39,6 +39,9 @@ const Register = () => {
                         </span>
                     </p>
                     <input id="button-sub" className="button submit" type="submit" value="Register" />
+                    <p>Already have an account?
+                        <a href="/login">Sign in</a>.
+                    </p>
                 </fieldset>
             </form>
         </section>

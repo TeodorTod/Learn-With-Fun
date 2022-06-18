@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
 import MyCorses from './components/MyCourses/MyCourses';
 import AddQuestions from './components/AddQuestions/AddQuestions';
+import Teachers from './components/Teachers/Teachers';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<MyCorses />} />
         <Route path="/add-questions" element={<AddQuestions />} />
+        <Route path='/teachers' element={<Teachers />} />
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
 
