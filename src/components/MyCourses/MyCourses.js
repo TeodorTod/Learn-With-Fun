@@ -1,3 +1,5 @@
+import './MyCourses.css';
+
 const MyCorses = () => {
 
     return(
@@ -23,6 +25,7 @@ const MyCorses = () => {
                                     <h5 className="m-0">$69</h5>
                                 </div>
                             </div>
+                            <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</button>
                         </div>
                     </div>
                 </div>
@@ -41,6 +44,7 @@ const MyCorses = () => {
                                     <h5 className="m-0">$99</h5>
                                 </div>
                             </div>
+                            <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</button>
                         </div>
                     </div>
                 </div>
@@ -59,6 +63,7 @@ const MyCorses = () => {
                                     <h5 className="m-0">$89</h5>
                                 </div>
                             </div>
+                            <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</button>
                         </div>
                     </div>
                 </div>
@@ -77,6 +82,7 @@ const MyCorses = () => {
                                     <h5 className="m-0">$99</h5>
                                 </div>
                             </div>
+                            <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</button>
                         </div>
                     </div>
                 </div>
@@ -95,6 +101,7 @@ const MyCorses = () => {
                                     <h5 className="m-0">$79</h5>
                                 </div>
                             </div>
+                            <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</button>
                         </div>
                     </div>
                 </div>
@@ -113,6 +120,7 @@ const MyCorses = () => {
                                     <h5 className="m-0">$129</h5>
                                 </div>
                             </div>
+                            <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</button>
                         </div>
                     </div>
                 </div>

@@ -13,6 +13,8 @@ import Register from "./components/Register/Register";
 import MyCorses from './components/MyCourses/MyCourses';
 import AddQuestions from './components/AddQuestions/AddQuestions';
 import Teachers from './components/Teachers/Teachers';
+import Contact from './components/Contact/Contact';
+import SendMessage from './components/SendMessage/SendMessage';
 
 
 
@@ -43,6 +45,8 @@ function App() {
         <Route path="/courses" element={<MyCorses />} />
         <Route path="/add-questions" element={<AddQuestions />} />
         <Route path='/teachers' element={<Teachers />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/sendMessage' element={<SendMessage />} />
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
 

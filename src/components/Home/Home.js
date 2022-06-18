@@ -138,7 +138,7 @@ const Home = () => {
                 <div className="col-lg-4 mb-4">
                     <div className="blog-item position-relative overflow-hidden rounded mb-2">
                         <img className="img-fluid" src="img/blog-1.jpg" alt="" />
-                        <a className="blog-overlay text-decoration-none" href="">
+                        <a className="blog-overlay text-decoration-none" href="/">
                             <h5 className="text-white mb-3">Best SEO practices in 2022</h5>
                             <p className="text-primary m-0">Jun 09, 2022</p>
                         </a>
@@ -147,7 +147,7 @@ const Home = () => {
                 <div className="col-lg-4 mb-4">
                     <div className="blog-item position-relative overflow-hidden rounded mb-2">
                         <img className="img-fluid" src="img/blog-2.jpg" alt="" />
-                        <a className="blog-overlay text-decoration-none" href="">
+                        <a className="blog-overlay text-decoration-none" href="/">
                             <h5 className="text-white mb-3">How effective is the learning from home?</h5>
                             <p className="text-primary m-0">Jul 01, 2022</p>
                         </a>
@@ -156,7 +156,7 @@ const Home = () => {
                 <div className="col-lg-4 mb-4">
                     <div className="blog-item position-relative overflow-hidden rounded mb-2">
                         <img className="img-fluid" src="img/blog-3.jpg" alt="" />
-                        <a className="blog-overlay text-decoration-none" href="">
+                        <a className="blog-overlay text-decoration-none" href="/">
                             <h5 className="text-white mb-3">How old do we have to be to start programming?</h5>
                             <p className="text-primary m-0">Jul 14, 2022</p>
                         </a>
