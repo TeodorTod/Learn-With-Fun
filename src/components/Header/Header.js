@@ -16,13 +16,15 @@ const Header = () => {
     );
 
     let userNavigation = (
-        <div className="navbar-nav py-0">
-            <Link to="/logout" className="nav-item nav-link">Logout</Link>
+        
+        <div className="col-lg-9">
+            <div className="navbar-nav py-0">
             <Link to="/my-courses" className="nav-item nav-link">My Courses</Link>
             <Link to="/add-questions" className="nav-item nav-link">Add Questions</Link>
-            <span className="nav-item nav-link">Welcome, {user.email}</span>
-
+            <Link to="/logout" className="nav-item nav-link">Logout</Link>
+            </div>
         </div>
+        
     );
 
     return (
@@ -31,9 +33,6 @@ const Header = () => {
             <a href="" className="text-decoration-none d-block d-lg-none">
                 <h1 className="m-0"><span className="text-primary">E</span>COURSES</h1>
             </a>
-            <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span className="navbar-toggler-icon"></span>
-            </button>
             <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div className="navbar-nav py-0">
                 <Link to="/" className="text-decoration-none">
@@ -50,7 +49,7 @@ const Header = () => {
                          ? userNavigation
                          : guestNavigation
                     }
-               
+        
             </div>
         </nav>
     </div>
