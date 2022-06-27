@@ -13,6 +13,7 @@ legend {
     padding-bottom: 20px;
     color: #FF6600;
     padding-left: 40px;
+
 }
 
 label {
@@ -29,4 +30,13 @@ label {
 #button-sub {
     font-size: 25px;
     margin-top: 30px;
+}
+
+span .input{
+    text-align: left;
+}
+
+span #repeat-pass {
+ 
+    padding-right: -140px;
 }

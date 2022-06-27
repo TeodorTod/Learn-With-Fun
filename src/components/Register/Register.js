@@ -18,6 +18,7 @@ const Register = () => {
     return (
         <section id="register-page" className="login">
             <form id="register-form" method="POST" onSubmit={submitHandler}>
+                <div className="register">
                 <fieldset>
                     <legend>Register Form</legend>
                     <p className="  ">
@@ -34,7 +35,7 @@ const Register = () => {
                     </p>
                     <p className="field">
                         <label htmlFor="repeat-pass">Repeat Password</label>
-                        <span className="input">
+                        <span className="input" id="repeat-pass">
                             <input type="password" name="repeat-pass" id="repeat-pass" placeholder="Repeat Password" />
                         </span>
                     </p>
@@ -43,6 +44,7 @@ const Register = () => {
                         <a href="/login">Sign in</a>.
                     </p>
                 </fieldset>
+                </div>
             </form>
         </section>
     );
