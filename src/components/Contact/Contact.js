@@ -8,7 +8,7 @@ const Contact = () => {
         <div class="container py-5">
             <div class="text-center mb-5">
                 <h5 class="text-primary text-uppercase mb-3">Contact</h5>
-                <h1>Contact For Any Question</h1>
+                <h1>Contact us</h1>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
