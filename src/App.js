@@ -29,12 +29,16 @@ function App() {
     setUser(authData);
   }
 
+  const register = (authData) => {
+    setUser(authData);
+  }
+
   const onLogout = () => {
 
   }
 
   return (
-    <AuthContext.Provider value={{user, login}}>
+    <AuthContext.Provider value={{user, login, register}}>
     <div>
       <Header />
       <main id='main'>

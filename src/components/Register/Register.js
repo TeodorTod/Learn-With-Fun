@@ -1,6 +1,13 @@
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthContext';
+import * as authService from '../../services/authService';
 import "./Register.css";
 
 const Register = () => {
+    const { register } = useContext(AuthContext);
+    const navigate = useNavigate();
+
     const submitHandler = (e) => {
         e.preventDefault();
 
@@ -8,11 +15,21 @@ const Register = () => {
 
         let email = formData.get('email');
         let password = formData.get('password');
-        let rePass = formData.get('repeat-pass');
+        let repass = formData.get('repass');
 
         console.log(email);
         console.log(password);
-        console.log(rePass);
+        console.log(repass);
+
+        authService.register(email, password, repass)
+        .then((authData) => {
+            register(authData);
+            navigate('/');
+        })
+        .catch(err => {
+            console.log(err);
+            navigate('/register');
+        })
     }
 
     return (
@@ -36,7 +53,7 @@ const Register = () => {
                     <p className="field">
                         <label htmlFor="repeat-pass">Repeat Password</label>
                         <span className="input" id="repeat-pass">
-                            <input type="password" name="repeat-pass" id="repeat-pass" placeholder="Repeat Password" />
+                            <input type="password" name="repass" id="repass" placeholder="Repeat Password" />
                         </span>
                     </p>
                     <input id="button-sub" className="button submit" type="submit" value="Register" />
