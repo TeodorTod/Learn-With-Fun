@@ -40,3 +40,12 @@ span #repeat-pass {
  
     padding-right: -140px;
 }
+
+button #regBtn{
+    padding-bottom: 50px;
+}
+
+#regBtn{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

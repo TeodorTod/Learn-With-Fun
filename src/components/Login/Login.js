@@ -48,7 +48,7 @@ const Login = () => {
                             <input type="password" name="password" id="password" placeholder="Password" />
                         </span>
                     </p>
-                    <input id="button-sub" className="button submit" type="submit" value="Login" />
+                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Login</button>
                     <p>Dont have an account?
                         <a href="/register">Sign up</a>.
                     </p>

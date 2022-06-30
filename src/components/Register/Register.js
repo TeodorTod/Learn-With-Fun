@@ -51,13 +51,13 @@ const Register = () => {
                         </span>
                     </p>
                     <p className="field">
-                        <label htmlFor="repeat-pass">Repeat Password</label>
+                        <label htmlFor="repeat-pass">Repeat</label>
                         <span className="input" id="repeat-pass">
                             <input type="password" name="repass" id="repass" placeholder="Repeat Password" />
                         </span>
                     </p>
-                    <input id="button-sub" className="button submit" type="submit" value="Register" />
-                    <p>Already have an account?
+                    <button id="regBtn" className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Register</button> 
+                    <p id="regP">Already have an account?
                         <a href="/login">Sign in</a>.
                     </p>
                 </fieldset>
