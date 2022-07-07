@@ -15,6 +15,7 @@ import AddQuestions from './components/AddQuestions/AddQuestions';
 import Teachers from './components/Teachers/Teachers';
 import Contact from './components/Contact/Contact';
 import SendMessage from './components/SendMessage/SendMessage';
+import MyCourses from './components/MyCourses/MyCourses';
 
 
 
@@ -47,6 +48,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<AllCorses />} />
+        <Route path="/my-courses" element={<MyCourses />} />
         <Route path="/add-questions" element={<AddQuestions />} />
         <Route path='/teachers' element={<Teachers />} />
         <Route path='/contact' element={<Contact />} />
