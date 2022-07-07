@@ -1,4 +1,4 @@
-import './MyCourses.css';
+import './AllCourses.css';
 
 const MyCorses = () => {
 

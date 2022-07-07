@@ -10,7 +10,7 @@ import About from  "./components/About/About";
 import Login from  "./components/Login/Login";
 import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
-import MyCorses from './components/MyCourses/MyCourses';
+import AllCorses from './components/AllCourses/AllCourses';
 import AddQuestions from './components/AddQuestions/AddQuestions';
 import Teachers from './components/Teachers/Teachers';
 import Contact from './components/Contact/Contact';
@@ -46,7 +46,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />} />
-        <Route path="/courses" element={<MyCorses />} />
+        <Route path="/courses" element={<AllCorses />} />
         <Route path="/add-questions" element={<AddQuestions />} />
         <Route path='/teachers' element={<Teachers />} />
         <Route path='/contact' element={<Contact />} />
