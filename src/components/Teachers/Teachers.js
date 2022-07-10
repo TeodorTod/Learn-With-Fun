@@ -18,7 +18,7 @@ const Teachers = () => {
                             </div>
                         </div>
                         <div className="bg-secondary p-4">
-                            <h5>Michaela Jordanova</h5>
+                            <h5>Michaela Petrova</h5>
                             <p className="m-0">Web Designer</p>
                         </div>
                     </div>
