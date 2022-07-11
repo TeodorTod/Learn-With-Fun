@@ -17,9 +17,6 @@ const Register = () => {
         let password = formData.get('password');
         let repass = formData.get('repass');
 
-        console.log(email);
-        console.log(password);
-        console.log(repass);
 
         authService.register(email, password, repass)
         .then((authData) => {
