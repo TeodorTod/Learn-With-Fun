@@ -16,6 +16,7 @@ import Teachers from './components/Teachers/Teachers';
 import Contact from './components/Contact/Contact';
 import SendMessage from './components/SendMessage/SendMessage';
 import MyCourses from './components/MyCourses/MyCourses';
+import NotFound from './components/NotFound/NotFound';
 
 
 
@@ -55,7 +56,7 @@ function App() {
             <Route path='/sendMessage' element={<SendMessage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="*" element={<h1 style={{textAlign: "center"}}>Not Found</h1>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
