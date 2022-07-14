@@ -5,9 +5,9 @@ import { AuthContext } from './contexts/AuthContext';
 import './App.css';
 
 import Header from "./components/Header/Header";
-import Home from  "./components/Home/Home";
-import About from  "./components/About/About";
-import Login from  "./components/Login/Login";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Login from "./components/Login/Login";
 import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
 import AllCorses from './components/AllCourses/AllCourses';
@@ -39,27 +39,27 @@ function App() {
   }
 
   return (
-    <AuthContext.Provider value={{user, login, register}}>
-    <div>
-      <Header />
-      <main id='main'>
-      
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/about" element={<About />} />
-        <Route path="/courses" element={<AllCorses />} />
-        <Route path="/my-courses" element={<MyCourses />} />
-        <Route path="/add-questions" element={<AddQuestions />} />
-        <Route path='/teachers' element={<Teachers />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/sendMessage' element={<SendMessage />} />
-        <Route path="/login" element={<Login />}/>
-        <Route path="/register" element={<Register />}/>
+    <AuthContext.Provider value={{ user, login, register }}>
+      <div>
+        <Header />
+        <main id='main'>
 
-      </Routes>
-      </main>
-      <Footer />
-    </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/courses" element={<AllCorses />} />
+            <Route path="/my-courses" element={<MyCourses />} />
+            <Route path="/add-questions" element={<AddQuestions />} />
+            <Route path='/teachers' element={<Teachers />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/sendMessage' element={<SendMessage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="*" element={<h1 style={{textAlign: "center"}}>Not Found</h1>} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </AuthContext.Provider>
   );
 }
