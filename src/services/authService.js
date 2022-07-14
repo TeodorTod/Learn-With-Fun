@@ -36,7 +36,6 @@ export const register = async (email, password, repass) => {
         //TODO show notification
         alert('Psswords don\'t match');
         throw jsonResult.message;
-        
     }
 };
 
