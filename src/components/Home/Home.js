@@ -49,7 +49,6 @@ const Home = () => {
     <div className="container-fluid py-5">
         <div className="container pt-5 pb-3">
             <div className="text-center mb-5">
-                <h5 className="text-primary text-uppercase mb-3" >Subjects</h5>
                 <h1>Explore Top Courses</h1>
             </div>
             <div className="row">
