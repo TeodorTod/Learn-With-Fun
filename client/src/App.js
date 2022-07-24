@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import { AuthContext } from './contexts/AuthContext';
 import './App.css';
 
+import {courseServive} from "./services/courseService";
+
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
@@ -21,48 +23,66 @@ import NotFound from './components/NotFound/NotFound';
 
 
 function App() {
-  const [user, setUser] = useState({
-    accessToken: "",
-    email: "",
-    _id: ""
-  });
+    const [data, setData] = useState();
+    const [user, setUser] = useState({
+        accessToken: "",
+        email: "",
+        _id: ""
+    });
 
-  const login = (authData) => {
-    setUser(authData);
-  }
+    
+    useEffect(() => {
+        fetch("http://localhost:3030/jsonstore/todos")
+            .then(res => res.json())
+            .then(result => {
+                setData(result)
 
-  const register = (authData) => {
-    setUser(authData);
-  }
+            })
+    }, []);
 
-  const onLogout = () => {
+    if (data != undefined) {
+        console.log(Object.values(data));
+    }
 
-  }
+    const login = (authData) => {
+        setUser(authData);
+    }
 
-  return (
-    <AuthContext.Provider value={{ user, login, register }}>
-      <div>
-        <Header />
-        <main id='main'>
+    const register = (authData) => {
+        setUser(authData);
+    }
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/courses" element={<AllCorses />} />
-            <Route path="/my-courses" element={<MyCourses />} />
-            <Route path="/add-questions" element={<AddQuestions />} />
-            <Route path='/teachers' element={<Teachers />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/sendMessage' element={<SendMessage />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </AuthContext.Provider>
-  );
+    const onLogout = () => {
+
+    }
+
+   
+
+    return (
+        <AuthContext.Provider value={{ user, login, register }}>
+            <div>
+                <Header />
+                <main id='main'>
+
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/courses" element={<AllCorses />} />
+                        <Route path="/my-courses" element={<MyCourses />} />
+                        <Route path="/add-questions" element={<AddQuestions />} />
+                        <Route path='/teachers' element={<Teachers />} />
+                        <Route path='/contact' element={<Contact />} />
+                        <Route path='/sendMessage' element={<SendMessage />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+
+                </main>
+                <Footer />
+            </div>
+        </AuthContext.Provider>
+    );
 }
 
 export default App;
