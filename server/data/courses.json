@@ -1,5 +1,26 @@
 [
-    {"_id": 0, "title": "Go to the gym"},
-    {"_id": 1, "title": "Clean your room"},
-    {"_id": 2, "title": "Prepare for the exam"}
+    {"_id": 0, 
+    "name": "Web design & development",
+    "numParticipants": 13,
+    "duration": 25,
+    "rating": 4.3,
+    "price": 69
+    },
+
+    {"_id": 1, 
+    "name": "Javascript for beginners",
+    "numParticipants": 69,
+    "duration": 18,
+    "rating": 4.8,
+    "price": 99
+    },
+    
+    {"_id": 2, 
+    "name": "HTML and CSS for beginners",
+    "numParticipants": 36,
+    "duration": 16,
+    "rating": 4.7,
+    "price": 89
+    }
+   
 ]

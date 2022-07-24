@@ -1,3 +1,5 @@
+
+
 import './AllCourses.css';
 
 const MyCorses = () => {
@@ -18,7 +20,7 @@ const MyCorses = () => {
                                 <small className="m-0"><i className="fa fa-users text-primary mr-2"></i>13 Students</small>
                                 <small className="m-0"><i className="far fa-clock text-primary mr-2"></i>25h 30m</small>
                             </div>
-                            <a className="h5" href="">Web design & development</a>
+                            <h2 className="h5">Web design & development</h2>
                             <div className="border-top mt-4 pt-4">
                                 <div className="d-flex justify-content-between">
                                     <h6 className="m-0"><i className="fa fa-star text-primary mr-2"></i>4.3 <small>(262)</small></h6>
@@ -38,7 +40,7 @@ const MyCorses = () => {
                                 <small className="m-0"><i className="fa fa-users text-primary mr-2"></i>69 Students</small>
                                 <small className="m-0"><i className="far fa-clock text-primary mr-2"></i>18h 45m</small>
                             </div>
-                            <a className="h5" href="">Javascript for beginners</a>
+                            <h2 className="h5">Javascript for beginners</h2>
                             <div className="border-top mt-4 pt-4">
                                 <div className="d-flex justify-content-between">
                                     <h6 className="m-0"><i className="fa fa-star text-primary mr-2"></i>4.8 <small>(212)</small></h6>
@@ -58,7 +60,7 @@ const MyCorses = () => {
                                 <small className="m-0"><i className="fa fa-users text-primary mr-2"></i>36 Students</small>
                                 <small className="m-0"><i className="far fa-clock text-primary mr-2"></i>16h 35m</small>
                             </div>
-                            <a className="h5" href="">HTML and CSS for beginners</a>
+                            <h2 className="h5">HTML and CSS for beginners</h2>
                             <div className="border-top mt-4 pt-4">
                                 <div className="d-flex justify-content-between">
                                     <h6 className="m-0"><i className="fa fa-star text-primary mr-2"></i>4.7 <small>(125)</small></h6>
@@ -78,7 +80,7 @@ const MyCorses = () => {
                                 <small className="m-0"><i className="fa fa-users text-primary mr-2"></i>29 Students</small>
                                 <small className="m-0"><i className="far fa-clock text-primary mr-2"></i>18h 15m</small>
                             </div>
-                            <a className="h5" href="">Business communications</a>
+                            <h2 className="h5">Business communications</h2>
                             <div className="border-top mt-4 pt-4">
                                 <div className="d-flex justify-content-between">
                                     <h6 className="m-0"><i className="fa fa-star text-primary mr-2"></i>4.4 <small>(311)</small></h6>
@@ -98,7 +100,7 @@ const MyCorses = () => {
                                 <small className="m-0"><i className="fa fa-users text-primary mr-2"></i>42 Students</small>
                                 <small className="m-0"><i className="far fa-clock text-primary mr-2"></i>11h 50m</small>
                             </div>
-                            <a className="h5" href="">SEO best practices</a>
+                            <h2 className="h5">SEO best practices</h2>
                             <div className="border-top mt-4 pt-4">
                                 <div className="d-flex justify-content-between">
                                     <h6 className="m-0"><i className="fa fa-star text-primary mr-2"></i>4.6 <small>(217)</small></h6>
@@ -118,7 +120,7 @@ const MyCorses = () => {
                                 <small className="m-0"><i className="fa fa-users text-primary mr-2"></i>13 Students</small>
                                 <small className="m-0"><i className="far fa-clock text-primary mr-2"></i>30h 30m</small>
                             </div>
-                            <a className="h5" href="">Marketing for beginners</a>
+                            <h2 className="h5">Marketing for beginners</h2>
                             <div className="border-top mt-4 pt-4">
                                 <div className="d-flex justify-content-between">
                                     <h6 className="m-0"><i className="fa fa-star text-primary mr-2"></i>4.1 <small>(278)</small></h6>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 
 import { AuthContext } from './contexts/AuthContext';
+import { CoursesContext } from './contexts/CoursesContext';
 import './App.css';
 
 import {courseServive} from "./services/courseService";
@@ -32,7 +33,7 @@ function App() {
 
     
     useEffect(() => {
-        fetch("http://localhost:3030/jsonstore/todos")
+        fetch("http://localhost:3030/jsonstore/courses")
             .then(res => res.json())
             .then(result => {
                 setData(result)
@@ -60,6 +61,7 @@ function App() {
 
     return (
         <AuthContext.Provider value={{ user, login, register }}>
+        <CoursesContext.Provider value={{ data }}>
             <div>
                 <Header />
                 <main id='main'>
@@ -81,6 +83,7 @@ function App() {
                 </main>
                 <Footer />
             </div>
+        </CoursesContext.Provider>
         </AuthContext.Provider>
     );
 }
