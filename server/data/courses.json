@@ -4,7 +4,8 @@
     "numParticipants": 13,
     "duration": 25,
     "rating": 4.3,
-    "price": 69
+    "price": 69,
+    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-1.jpg"
     },
 
     {"_id": 1, 
@@ -12,7 +13,8 @@
     "numParticipants": 69,
     "duration": 18,
     "rating": 4.8,
-    "price": 99
+    "price": 99,
+    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-2.jpg"
     },
     
     {"_id": 2, 
@@ -20,7 +22,8 @@
     "numParticipants": 36,
     "duration": 16,
     "rating": 4.7,
-    "price": 89
+    "price": 89,
+    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-3.jpg"
     }
    
 ]

@@ -6,3 +6,7 @@ button {
     margin-left: 20px;
     margin-right: 50px;
 }
+
+div .row {
+    justify-content: center;
+}

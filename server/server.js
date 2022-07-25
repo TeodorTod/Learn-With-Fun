@@ -1334,33 +1334,30 @@
     };
     var seedData = {
         games: {
-            "ff436770-76c5-40e2-b231-77409eda7a61": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "CoverFire",
-                "category": "Action",
-                "maxLevel": "70",
-                "imageUrl": "/images/CoverFire.png",
-                "summary": "Best action shooter game, easy controls, realistic 3D graphics and fun offline missions. Get your best shooting gun and take to action!",
-                "_createdOn": 1617194128618,
-            },
-            "1840a313-225c-416a-817a-9954d4609f7c": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "MineCraft",
-                "category": "Arcade",
-                "maxLevel": "250",
-                "imageUrl": "/images/MineCraft.png",
-                "summary": "Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for. Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for.",
-                "_createdOn": 1617194210928,
-            },
-            "126777f5-3277-42ad-b874-76d043b069cb": {
-                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "title": "Zombie Lang",
-                "category": "Vertical Shooter",
-                "maxLevel": "100",
-                "imageUrl": "/images/ZombieLang.png",
-                "summary": "With it’s own unique story, set between the events of the first movie, Zombieland: Double Tap- Road Trip is a ridiculously fun top-down twin-stick shooter featuring local co-op multiplayer for up to four players. Play as your favorite heroes from the original — Tallahassee, Columbus, Wichita and Little Rock — as well as new unlockable characters from the upcoming sequel.  The game embraces the game-like elements seen in the film by  incorporating everything from the “Rules” to “Zombie Kill of the Week”.  Use your special abilities, an arsenal of weapons and the essential Zombieland rules for survival to stay alive against huge numbers of uniquely grotesque and dangerous undead monstrosities in Zombieland: Double Tap- Road Trip’s story-based campaign mode, wave-based horde mode, and boss battles.",
-                "_createdOn": 1617194295474,
-            }
+            "ff436770-76c5-40e2-b231-77409eda7a61": {"_id": 0, 
+    "name": "Web design & development",
+    "numParticipants": 13,
+    "duration": 25,
+    "rating": 4.3,
+    "price": 69,
+    "image": "https://drive.google.com/file/d/1E2mNOSU-xdJXirqeGtbdhHH0bosZwaNt/view?usp=sharing"
+    },
+            "1840a313-225c-416a-817a-9954d4609f7c": {"_id": 1, 
+    "name": "Javascript for beginners",
+    "numParticipants": 69,
+    "duration": 18,
+    "rating": 4.8,
+    "price": 99,
+    "image": "https://drive.google.com/file/d/1VC4i8UBYluiMVquDYouio-90ut7kCVqc/view?usp=sharing"
+    },
+            "126777f5-3277-42ad-b874-76d043b069cb": {"_id": 2, 
+    "name": "HTML and CSS for beginners",
+    "numParticipants": 36,
+    "duration": 16,
+    "rating": 4.7,
+    "price": 89,
+    "image": "https://drive.google.com/file/d/17BMN__1BzheqNrCm0V1Go5e-W4sL7ijL/view?usp=sharing    "
+    }
         },
         comments: {
         
