@@ -63,7 +63,7 @@ function App() {
                     <main id='main'>
 
                         <Routes>
-                            <Route path="/" element={<Home />} />
+                            <Route path="/" element={<Home data={data}/>} />
                             <Route path="/about" element={<About />} />
                             <Route path="/courses" element={<AllCorses />} />
                             <Route path="/my-courses" element={<MyCourses />} />

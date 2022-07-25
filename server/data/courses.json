@@ -5,7 +5,8 @@
     "duration": 25,
     "rating": 4.3,
     "price": 69,
-    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-1.jpg"
+    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-1.jpg",
+    "text": "A very detailed web design course where you'll learn all the latest technologies you'll need to get started. The course is almost entirely practically oriented, stimulating a real work environment to gain more experience and realize some independent projects."
     },
 
     {"_id": 1, 
@@ -14,7 +15,8 @@
     "duration": 18,
     "rating": 4.8,
     "price": 99,
-    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-2.jpg"
+    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-2.jpg",
+    "text": "Learn javascript online and supercharge your web design with this Javascript for beginners training course.JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.JavaScript is easy to learn.This tutorial will teach you JavaScript from basic to advanced."
     },
     
     {"_id": 2, 
@@ -23,7 +25,8 @@
     "duration": 16,
     "rating": 4.7,
     "price": 89,
-    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-3.jpg"
+    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-3.jpg",
+    "text": "Throughout this course, you'll learn about the underlying structure of the web - HTML. You'll learn how to use this tree-like structure to create websites. You'll also learn how to apply styling to a website through CSS. You'll learn about CSS syntax, selectors, and units. Along the way, you'll also learn about code editors and a browser's Developer Tools."
     },
 
     {"_id": 3, 
@@ -32,7 +35,8 @@
     "duration": 26,
     "rating": 4.6,
     "price": 109,
-    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-4.jpg"
+    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-4.jpg",
+    "text": "Our Advanced Search Engine Optimization course will transform you into a full-stack SEO professional driving sustained growth in your website’s most critical marketing channel. You will master the many facets of SEO like keyword research, technical SEO, link building, analytics, and much more with this SEO training course."
     }
    
 ]
