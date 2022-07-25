@@ -3,6 +3,7 @@ import { CoursesContext } from "../../../contexts/CoursesContext";
 
 export default function SingleCourse() {
     const { data } = useContext(CoursesContext);
+
     return (
         <>
         {data != null
@@ -21,9 +22,7 @@ export default function SingleCourse() {
                                         </div>
                                     </div>
                                     <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn'>Details</button>
-                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Edit</button>
-                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn'>Apply</button>
-                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Delete</button>
+                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</button>
                                 </div>
                             </div>
                         </div>

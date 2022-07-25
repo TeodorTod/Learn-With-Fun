@@ -25,9 +25,9 @@ export const getAll = async () => {
 //     return data;
 // }
 
-// export const getOne = async(courseId) => {
-//     let res = await fetch(`${baseUrl}/pets/${courseId}`)
-//     let data = await res.json();
+export const getOne = async(courseId) => {
+    let res = await fetch(`${baseUrl}/courses/${courseId}`)
+    let data = await res.json();
 
-//     return data;
-// }
+    return data;
+}

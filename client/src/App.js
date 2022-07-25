@@ -20,6 +20,7 @@ import Contact from './components/Contact/Contact';
 import SendMessage from './components/SendMessage/SendMessage';
 import MyCourses from './components/MyCourses/MyCourses';
 import NotFound from './components/NotFound/NotFound';
+import Details from './components/Details/Details';
 
 
 
@@ -73,6 +74,7 @@ function App() {
                             <Route path='/sendMessage' element={<SendMessage />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
+                            <Route path='/details/:courseId' element={<Details />} />
                             <Route path="*" element={<NotFound />} />
                         </Routes>
 
