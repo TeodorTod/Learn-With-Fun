@@ -68,7 +68,7 @@ const Home = ({
                             <div className="col-lg-3 col-md-6 mb-4">
                                 <div className="cat-item position-relative overflow-hidden rounded mb-2">
                                     <img className="img-fluid" id="home" src={x.image} alt="" />
-                                    <Link className="cat-overlay text-white text-decoration-none" to="/about">
+                                    <Link className="cat-overlay text-white text-decoration-none" to={`/details/${x._id}`}>
                                         <h4 className="text-white font-weight-medium">{x.name}</h4>
                                         <span>${x.price}</span>
                                     </Link>

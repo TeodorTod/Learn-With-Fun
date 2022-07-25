@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CoursesContext } from "../../../contexts/CoursesContext";
+import { Link } from "react-router-dom";
 
 export default function SingleCourse() {
     const { data } = useContext(CoursesContext);
@@ -21,8 +22,8 @@ export default function SingleCourse() {
                                             <h5 className="m-0">$ {x.price}</h5>
                                         </div>
                                     </div>
-                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn'>Details</button>
-                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</button>
+                                    <Link to={`/details/${x._id}`} className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn'>Details</Link>
+                                    <a className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</a>
                                 </div>
                             </div>
                         </div>
