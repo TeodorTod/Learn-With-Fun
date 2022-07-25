@@ -24,6 +24,15 @@
     "rating": 4.7,
     "price": 89,
     "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-3.jpg"
+    },
+
+    {"_id": 3, 
+    "name": "SEO Advaced Practises",
+    "numParticipants": 13,
+    "duration": 26,
+    "rating": 4.6,
+    "price": 109,
+    "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-4.jpg"
     }
    
 ]

@@ -17,11 +17,13 @@ export default function SingleCourse() {
                                     <div className="border-top mt-4 pt-4">
                                         <div className="d-flex justify-content-between">
                                             <h6 className="m-0"><i className="fa fa-star text-primary mr-2"></i>{x.rating}</h6>
-                                            <h5 className="m-0">{x.price}</h5>
+                                            <h5 className="m-0">$ {x.price}</h5>
                                         </div>
                                     </div>
                                     <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn'>Details</button>
-                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</button>
+                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Edit</button>
+                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn'>Apply</button>
+                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Delete</button>
                                 </div>
                             </div>
                         </div>
