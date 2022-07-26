@@ -14,7 +14,7 @@ const Contact = () => {
                 <div class="col-lg-8">
                     <div class="contact-form bg-secondary rounded p-5">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form name="sentMessage" id="contactForm" noValidate="novalidate">
                             <div class="control-group">
                                 <input type="text" class="form-control border-0 p-4" id="name" placeholder="Your Name" required="yes" data-validation-required-message="Please enter your name" />
                                 <p class="help-block text-danger"></p>

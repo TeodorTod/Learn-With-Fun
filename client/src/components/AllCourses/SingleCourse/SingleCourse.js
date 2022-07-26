@@ -1,9 +1,15 @@
 import { useContext } from "react";
 import { CoursesContext } from "../../../contexts/CoursesContext";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthContext";
 
 export default function SingleCourse() {
     const { data } = useContext(CoursesContext);
+    const {user} = useContext(AuthContext);
+
+    let userButton = (
+        <a className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</a>
+    );
 
     return (
         <>
@@ -23,7 +29,10 @@ export default function SingleCourse() {
                                         </div>
                                     </div>
                                     <Link to={`/details/${x._id}`} className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn'>Details</Link>
-                                    <a className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</a>
+                                    {user.email
+                                    ? userButton
+                                    : ''
+                                }
                                 </div>
                             </div>
                         </div>

@@ -39,9 +39,13 @@ export const register = async (email, password, repass) => {
     }
 };
 
-export const logout = () => {
-    localStorage.removeItem('username');
-}
+export const logout = (token) => {
+    return fetch('http://localhost:3030/users/logout', {
+        headers: {
+            'X-Authorization': token,
+        }
+    })
+};
 
 export const getUser = () => {
     let username = localStorage.getItem('username');

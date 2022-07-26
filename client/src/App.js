@@ -21,16 +21,18 @@ import SendMessage from './components/SendMessage/SendMessage';
 import MyCourses from './components/MyCourses/MyCourses';
 import NotFound from './components/NotFound/NotFound';
 import Details from './components/Details/Details';
+import Logout from './components/Logout/Logout';
 
 
 
 function App() {
-    const [data, setData] = useState(null);
-    const [user, setUser] = useState({
+    const initialAuthState = {
         accessToken: "",
         email: "",
         _id: ""
-    });
+    }
+    const [data, setData] = useState(null);
+    const [user, setUser] = useState(initialAuthState);
 
 
     useEffect(() => {
@@ -38,33 +40,33 @@ function App() {
             .then(res => res.json())
             .then(result => {
                 setData(Object.values(result))
-            });  
+            });
     }, []);
 
 
     const login = (authData) => {
         setUser(authData);
-    }
+    };
 
     const register = (authData) => {
         setUser(authData);
-    }
+    };
 
-    const onLogout = () => {
-
+    const logout = () => {
+        setUser(initialAuthState);
     }
 
 
 
     return (
-        <AuthContext.Provider value={{ user, login, register }}>
+        <AuthContext.Provider value={{ user, login, register, logout }}>
             <CoursesContext.Provider value={{ data }}>
                 <div>
                     <Header />
                     <main id='main'>
 
                         <Routes>
-                            <Route path="/" element={<Home data={data}/>} />
+                            <Route path="/" element={<Home data={data} />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/courses" element={<AllCorses />} />
                             <Route path="/my-courses" element={<MyCourses />} />
@@ -74,6 +76,7 @@ function App() {
                             <Route path='/sendMessage' element={<SendMessage />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
+                            <Route path="/logout" element={<Logout />} />
                             <Route path='/details/:courseId' element={<Details />} />
                             <Route path="*" element={<NotFound />} />
                         </Routes>
