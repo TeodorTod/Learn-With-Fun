@@ -14,7 +14,7 @@ import Login from "./components/Login/Login";
 import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
 import AllCorses from './components/AllCourses/AllCourses';
-import AddQuestions from './components/AddQuestions/AddQuestions';
+import AddHomework from './components/AddHomework/AddHomework';
 import Teachers from './components/Teachers/Teachers';
 import Contact from './components/Contact/Contact';
 import SendMessage from './components/SendMessage/SendMessage';
@@ -68,7 +68,7 @@ function App() {
                             <Route path="/about" element={<About />} />
                             <Route path="/courses" element={<AllCorses />} />
                             <Route path="/my-courses" element={<MyCourses />} />
-                            <Route path="/add-questions" element={<AddQuestions />} />
+                            <Route path="/add-homework" element={<AddHomework />} />
                             <Route path='/teachers' element={<Teachers />} />
                             <Route path='/contact' element={<Contact />} />
                             <Route path='/sendMessage' element={<SendMessage />} />

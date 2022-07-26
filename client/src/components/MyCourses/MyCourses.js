@@ -1,4 +1,5 @@
 import "./MyCourses.css"
+import { Link } from "react-router-dom";
 
 const MyCourses = () => {
 
@@ -25,8 +26,8 @@ const MyCourses = () => {
                                     </div>
                                 </div>
                                 <div className="vertical-center">
-                                <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn-course'>  Add Question</button>
-                                <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Add Comment</button>
+                                <Link to={'/add-homework'} className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn-course'>  Add Homework</Link>
+                                <Link to={'/contact'} className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Add Question</Link>
                                 </div>
                             </div>
                         </div>
