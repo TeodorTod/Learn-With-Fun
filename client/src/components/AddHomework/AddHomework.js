@@ -31,7 +31,7 @@ const AddHomework = () => {
                                 <p className="help-block text-danger"></p>
                             </div>
                             <div className="text-center">
-                            <button classNameName="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Send</button>
+                            <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Send</button>
                             </div>
                         </form>
                     </div>

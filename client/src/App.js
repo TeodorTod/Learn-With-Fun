@@ -32,6 +32,7 @@ function App() {
         _id: ""
     }
     const [data, setData] = useState(null);
+    const [myCourse, setMyCourse] = useState([]);
     const [user, setUser] = useState(initialAuthState);
 
 
@@ -60,7 +61,7 @@ function App() {
 
     return (
         <AuthContext.Provider value={{ user, login, register, logout }}>
-            <CoursesContext.Provider value={{ data }}>
+            <CoursesContext.Provider value={{ data, setMyCourse }}>
                 <div>
                     <Header />
                     <main id='main'>
@@ -69,7 +70,7 @@ function App() {
                             <Route path="/" element={<Home data={data} />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/courses" element={<AllCorses />} />
-                            <Route path="/my-courses" element={<MyCourses />} />
+                            <Route path="/my-courses" element={<MyCourses myCourse={myCourse}/>} />
                             <Route path="/add-homework" element={<AddHomework />} />
                             <Route path='/teachers' element={<Teachers />} />
                             <Route path='/contact' element={<Contact />} />
