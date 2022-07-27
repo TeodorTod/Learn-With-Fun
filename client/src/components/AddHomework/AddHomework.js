@@ -19,7 +19,11 @@ const AddHomework = () => {
                                 <p className="help-block text-danger"></p>
                             </div>
                             <div className="control-group">
-                                <input type="text" className="form-control border-0 p-4" id="subject" placeholder="Course" required="required" data-validation-required-message="Please enter a subject" />
+                                <input type="text" className="form-control border-0 p-4" id="subject" placeholder="Course" required="required" data-validation-required-message="Please enter a course" />
+                                <p className="help-block text-danger"></p>
+                            </div>
+                            <div className="control-group">
+                                <input type="text" className="form-control border-0 p-4" id="subject" placeholder="Lesson" required="required" data-validation-required-message="Please enter a lesson" />
                                 <p className="help-block text-danger"></p>
                             </div>
                             <div className="control-group">
