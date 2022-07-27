@@ -32,7 +32,7 @@ function App() {
         _id: ""
     }
     const [data, setData] = useState(null);
-    const [myCourse, setMyCourse] = useState([]);
+    const [myCourse, setMyCourse] = useState(null);
     const [user, setUser] = useState(initialAuthState);
 
 
