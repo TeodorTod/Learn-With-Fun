@@ -22,6 +22,7 @@ import MyCourses from './components/MyCourses/MyCourses';
 import NotFound from './components/NotFound/NotFound';
 import Details from './components/Details/Details';
 import Logout from './components/Logout/Logout';
+import Homeworks from './components/Homeworks/Homeworks';
 
 
 
@@ -72,6 +73,7 @@ function App() {
                             <Route path="/courses" element={<AllCorses />} />
                             <Route path="/my-courses" element={<MyCourses myCourse={myCourse}/>} />
                             <Route path="/add-homework" element={<AddHomework />} />
+                            <Route path="/homeworks" element={<Homeworks />} />
                             <Route path='/teachers' element={<Teachers />} />
                             <Route path='/contact' element={<Contact />} />
                             <Route path='/sendMessage' element={<SendMessage />} />

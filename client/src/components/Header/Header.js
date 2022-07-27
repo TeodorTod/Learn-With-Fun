@@ -21,6 +21,7 @@ const Header = () => {
             <div className="navbar-nav py-0">
                 <Link to="/my-courses" className="nav-item nav-link">My Courses</Link>
                 <Link to="/add-homework" className="nav-item nav-link">Add Homework</Link>
+                <Link to="/homeworks" className="nav-item nav-link">Homeworks</Link>
                 <Link to="/logout" className="nav-item nav-link">Logout</Link>
             </div>
         </div>
