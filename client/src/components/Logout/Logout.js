@@ -14,6 +14,9 @@ const Logout = () => {
                 logout();
                 navigate('/');
             })
+            .catch(() => {
+                navigate('/');
+            })
     }, [])
 
     return null;
