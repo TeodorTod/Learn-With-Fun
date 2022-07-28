@@ -3,6 +3,8 @@ import { CoursesContext } from "../../../contexts/CoursesContext";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 
+import './SingleCourse.css';
+
 export default function SingleCourse() {
     const { data, setMyCourse } = useContext(CoursesContext);
     const { user } = useContext(AuthContext);
@@ -34,7 +36,7 @@ export default function SingleCourse() {
                         </div>
                     </div>
                 )
-                : <h2>No Courses in database</h2>}
+                : <h2 className="no-courses">No Courses in database</h2>}
         </>
     );
 }
