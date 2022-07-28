@@ -6,6 +6,7 @@ import { CoursesContext } from './contexts/CoursesContext';
 import './App.css';
 
 import { courseServive } from "./services/courseService";
+import useLocalStorage from './hooks/useLocalStorage';
 
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -34,7 +35,7 @@ function App() {
     }
     const [data, setData] = useState(null);
     const [myCourse, setMyCourse] = useState(null);
-    const [user, setUser] = useState(initialAuthState);
+    const [user, setUser] = useLocalStorage('user', initialAuthState);;
 
 
     useEffect(() => {
