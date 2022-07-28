@@ -4,7 +4,7 @@ export const login = async (email, password) => {
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify({email, password})
+        body: JSON.stringify({ email, password })
     });
 
     let jsonResult = await res.json()
@@ -15,7 +15,7 @@ export const login = async (email, password) => {
         //TODO show notification
         alert(jsonResult.message);
         throw jsonResult.message;
-        
+
     }
 };
 
@@ -25,7 +25,7 @@ export const register = async (email, password, repass) => {
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify({email, password})
+        body: JSON.stringify({ email, password })
     });
 
     let jsonResult = await res.json()
@@ -39,12 +39,19 @@ export const register = async (email, password, repass) => {
     }
 };
 
-export const logout = (token) => {
-    return fetch('http://localhost:3030/users/logout', {
-        headers: {
-            'X-Authorization': token,
-        }
-    })
+export const logout = async (accessToken) => {
+    try {
+        const response = fetch('http://localhost:3030/users/logout', {
+            headers: {
+                'X-Authorization': accessToken,
+            }
+        });
+        return response;
+
+    } catch (error) {
+        console.log(error);
+    }
+
 };
 
 export const getUser = () => {

@@ -5,7 +5,7 @@ import { AuthContext } from './contexts/AuthContext';
 import { CoursesContext } from './contexts/CoursesContext';
 import './App.css';
 
-import { courseServive } from "./services/courseService";
+import * as courseService from "./services/courseService";
 import useLocalStorage from './hooks/useLocalStorage';
 
 import Header from "./components/Header/Header";
@@ -28,21 +28,23 @@ import Homeworks from './components/Homeworks/Homeworks';
 
 
 function App() {
-    const initialAuthState = {
-        accessToken: "",
-        email: "",
-        _id: ""
-    }
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]);
     const [myCourse, setMyCourse] = useState(null);
-    const [user, setUser] = useLocalStorage('user', initialAuthState);;
+    const [user, setUser] = useLocalStorage('user', {});
 
+
+    // useEffect(() => {
+    //     fetch("http://localhost:3030/data/courses")
+    //         .then(res => res.json())
+    //         .then(result => {
+    //             setData(Object.values(result))
+    //         });
+    // }, []);
 
     useEffect(() => {
-        fetch("http://localhost:3030/jsonstore/courses")
-            .then(res => res.json())
+        courseService.getAll()
             .then(result => {
-                setData(Object.values(result))
+                setData(result);
             });
     }, []);
 
@@ -56,13 +58,13 @@ function App() {
     };
 
     const logout = () => {
-        setUser(initialAuthState);
+        setUser({});
     }
 
 
 
     return (
-        <AuthContext.Provider value={{ user, login, register, logout }}>
+        <AuthContext.Provider value={{ user: user, login, register, logout }}>
             <CoursesContext.Provider value={{ data, setMyCourse }}>
                 <div>
                     <Header />

@@ -11,22 +11,22 @@ const Login = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        
+
         let formData = new FormData(e.currentTarget);
 
         let email = formData.get('email');
         let password = formData.get('password');
 
         authService.login(email, password)
-        .then((authData) => {
-            login(authData);
-            navigate('/');
-        })
-        .catch(err => {
-            console.log(err);
-            navigate('/login');
-        })
-    
+            .then((authData) => {
+                login(authData);
+                navigate('/');
+            })
+            .catch(err => {
+                console.log(err);
+                navigate('/login');
+            })
+
     }
 
     return (

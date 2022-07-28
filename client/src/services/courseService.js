@@ -1,29 +1,8 @@
-const baseUrl = 'http://localhost:3030/jsonstore/';
+import * as request from './requester';
 
-export const getAll = async () => {
-    let response = await fetch(`${baseUrl}/courses`)
+const baseUrl = 'http://localhost:3030/data/';
 
-    let course = await response.json();
-
-    let result = Object.values(course)
-
-    return result; 
-};
-
-// export const create = async (courseData, token) => {
-//     let res = await fetch(`${baseUrl}/courses`, {
-//         method: 'POST',
-//         headers: {
-//             'content-type': 'application/json',
-//             'X-Authorization': 'token'
-//         },
-//         body: JSON.stringify(petData)
-//     });
-
-//     let data = await res.json();
-    
-//     return data;
-// }
+export const getAll = () => request.get(`${baseUrl}/courses`);
 
 export const getOne = async(courseId) => {
     let res = await fetch(`${baseUrl}/courses/${courseId}`)

@@ -1333,33 +1333,70 @@
         }
     };
     var seedData = {
-        games: {
-            "ff436770-76c5-40e2-b231-77409eda7a61": {"_id": 0, 
-    "name": "Web design & development",
-    "numParticipants": 13,
-    "duration": 25,
-    "rating": 4.3,
-    "price": 69,
-    "image": "https://drive.google.com/file/d/1E2mNOSU-xdJXirqeGtbdhHH0bosZwaNt/view?usp=sharing"
-    },
-            "1840a313-225c-416a-817a-9954d4609f7c": {"_id": 1, 
-    "name": "Javascript for beginners",
-    "numParticipants": 69,
-    "duration": 18,
-    "rating": 4.8,
-    "price": 99,
-    "image": "https://drive.google.com/file/d/1VC4i8UBYluiMVquDYouio-90ut7kCVqc/view?usp=sharing"
-    },
-            "126777f5-3277-42ad-b874-76d043b069cb": {"_id": 2, 
-    "name": "HTML and CSS for beginners",
-    "numParticipants": 36,
-    "duration": 16,
-    "rating": 4.7,
-    "price": 89,
-    "image": "https://drive.google.com/file/d/17BMN__1BzheqNrCm0V1Go5e-W4sL7ijL/view?usp=sharing    "
-    }
+        "courses": {
+            "ff436770-76c5-40e2-b231-77409eda7a61": {"_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "_id": 0, 
+            "name": "Web design & development",
+            "numParticipants": 13,
+            "duration": 25,
+            "rating": 4.3,
+            "price": 69,
+            "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-1.jpg",
+            "text": "A very detailed web design course where you'll learn all the latest technologies you'll need to get started. The course is almost entirely practically oriented, stimulating a real work environment to gain more experience and realize some independent projects."
+            },
+            "1840a313-225c-416a-817a-9954d4609f7c": {"_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "_id": 1, 
+            "name": "Javascript for beginners",
+            "numParticipants": 69,
+            "duration": 18,
+            "rating": 4.8,
+            "price": 99,
+            "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-2.jpg",
+            "text": "Learn javascript online and supercharge your web design with this Javascript for beginners training course. JavaScript is the world's most popular programming language. JavaScript is the programming language of the Web. JavaScript is easy to learn. This tutorial will teach you JavaScript from basic to advanced."
+            },
+            "126777f5-3277-42ad-b874-76d043b069cb": {"_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "_id": 2, 
+            "name": "HTML and CSS for beginners",
+            "numParticipants": 36,
+            "duration": 16,
+            "rating": 4.7,
+            "price": 89,
+            "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-3.jpg",
+            "text": "Throughout this course, you'll learn about the underlying structure of the web - HTML. You'll learn how to use this tree-like structure to create websites. You'll also learn how to apply styling to a website through CSS. You'll learn about CSS syntax, selectors, and units. Along the way, you'll also learn about code editors and a browser's Developer Tools."
+            },
+            "126777f5-3277-42ad-b874-76d043b069ca": {"_ownerId": "847ec027-f679-4086-8033-5173a2f9c93a",
+                "_id": 3, 
+            "name": "SEO Advaced Practises",
+            "numParticipants": 13,
+            "duration": 26,
+            "rating": 4.6,
+            "price": 109,
+            "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-4.jpg",
+            "text": "Our Advanced Search Engine Optimization course will transform you into a full-stack SEO professional driving sustained growth in your website’s most critical marketing channel. You will master the many facets of SEO like keyword research, technical SEO, link building, analytics, and much more with this SEO training course."
+            }
+
         },
-        comments: {
+        homeworks: {
+            "126777f5-3277-42ax-b874-76d043b069cb": {"_ownerId": "847ec017-f659-4086-8032-5173e2f9c93a",
+                "_id": 44, 
+            "name": "First",
+            "numParticipants": 36,
+            "duration": 16,
+            "rating": 4.7,
+            "price": 89,
+            "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-3.jpg",
+            "text": "Throughout this course, you'll learn about the underlying structure of the web - HTML. You'll learn how to use this tree-like structure to create websites. You'll also learn how to apply styling to a website through CSS. You'll learn about CSS syntax, selectors, and units. Along the way, you'll also learn about code editors and a browser's Developer Tools."
+            },
+            "126767f5-3277-42ad-b874-76d043z089ca": {"_ownerId": "847ec027-f679-4087-8033-5173a2f9c93a",
+                "_id": 23, 
+            "name": "Second",
+            "numParticipants": 13,
+            "duration": 26,
+            "rating": 4.6,
+            "price": 109,
+            "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-4.jpg",
+            "text": "Our Advanced Search Engine Optimization course will transform you into a full-stack SEO professional driving sustained growth in your website’s most critical marketing channel. You will master the many facets of SEO like keyword research, technical SEO, link building, analytics, and much more with this SEO training course."
+            }
         
         }
     };
