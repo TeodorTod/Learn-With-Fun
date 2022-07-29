@@ -7,6 +7,7 @@ import './App.css';
 
 import * as courseService from "./services/courseService";
 import useLocalStorage from './hooks/useLocalStorage';
+import uniqid from 'uniqid';
 
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -15,7 +16,7 @@ import Login from "./components/Login/Login";
 import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
 import AllCorses from './components/AllCourses/AllCourses';
-import AddHomework from './components/AddHomework/AddHomework';
+import Homeworks from './components/Homeworks/Homeworks';
 import Teachers from './components/Teachers/Teachers';
 import Contact from './components/Contact/Contact';
 import SendMessage from './components/SendMessage/SendMessage';
@@ -23,7 +24,6 @@ import MyCourses from './components/MyCourses/MyCourses';
 import NotFound from './components/NotFound/NotFound';
 import Details from './components/Details/Details';
 import Logout from './components/Logout/Logout';
-import Homeworks from './components/Homeworks/Homeworks';
 
 
 
@@ -31,6 +31,7 @@ function App() {
     const [data, setData] = useState([]);
     const [myCourse, setMyCourse] = useState(null);
     const [user, setUser] = useLocalStorage('user', {});
+    const [homeworks, setHomeworks] = useState([]);
 
 
     // useEffect(() => {
@@ -59,7 +60,18 @@ function App() {
 
     const logout = () => {
         setUser({});
-    }
+    };
+
+    const addHomeworkHandler = (homeworkData) => {
+        setHomeworks(state => [
+            ...state,
+            {
+                ...homeworkData,
+                _id: uniqid()
+            }
+        ])
+
+    };
 
 
 
@@ -75,8 +87,7 @@ function App() {
                             <Route path="/about" element={<About />} />
                             <Route path="/courses" element={<AllCorses />} />
                             <Route path="/my-courses" element={<MyCourses myCourse={myCourse}/>} />
-                            <Route path="/add-homework" element={<AddHomework />} />
-                            <Route path="/homeworks" element={<Homeworks />} />
+                            <Route path="/homeworks" element={<Homeworks homeworks={homeworks} addHomeworkHandler={addHomeworkHandler}/>} />
                             <Route path='/teachers' element={<Teachers />} />
                             <Route path='/contact' element={<Contact />} />
                             <Route path='/sendMessage' element={<SendMessage />} />

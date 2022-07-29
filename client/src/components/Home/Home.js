@@ -9,9 +9,9 @@ const Home = ({
     const navigate = useNavigate();
     let newData;
 
-    if (data != null) {
-        newData = [...data].sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));;
-    }
+        if (data != null) {
+            newData = [...data].sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));;
+        }
 
     return (
         <div>
