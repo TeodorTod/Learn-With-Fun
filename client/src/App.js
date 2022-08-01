@@ -6,6 +6,7 @@ import { CoursesContext } from './contexts/CoursesContext';
 import './App.css';
 
 import * as courseService from "./services/courseService";
+import * as homeworkService from './services/homeworkService';
 import useLocalStorage from './hooks/useLocalStorage';
 import uniqid from 'uniqid';
 
@@ -34,18 +35,17 @@ function App() {
     const [homeworks, setHomeworks] = useState([]);
 
 
-    // useEffect(() => {
-    //     fetch("http://localhost:3030/data/courses")
-    //         .then(res => res.json())
-    //         .then(result => {
-    //             setData(Object.values(result))
-    //         });
-    // }, []);
-
     useEffect(() => {
         courseService.getAll()
             .then(result => {
                 setData(result);
+            });
+    }, []);
+
+    useEffect(() => {
+        homeworkService.getAll()
+            .then(result => {
+                setHomeworks(result);
             });
     }, []);
 
@@ -72,7 +72,6 @@ function App() {
         ])
 
     };
-
 
 
     return (

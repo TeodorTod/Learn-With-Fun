@@ -13,12 +13,10 @@ const Homeworks = ({
 
         homeworkService.create(homeworkData)
             .then(result => {
+                addHomeworkHandler(homeworkData);
             })
-
-        addHomeworkHandler(homeworkData);
     }
-
-
+    
     return (
         <>
             <div className="container-fluid py-5">

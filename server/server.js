@@ -1377,27 +1377,6 @@
 
         },
         homeworks: {
-            "126777f5-3277-42ax-b874-76d043b069cb": {"_ownerId": "847ec017-f659-4086-8032-5173e2f9c93a",
-                "_id": 44, 
-            "name": "First",
-            "numParticipants": 36,
-            "duration": 16,
-            "rating": 4.7,
-            "price": 89,
-            "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-3.jpg",
-            "text": "Throughout this course, you'll learn about the underlying structure of the web - HTML. You'll learn how to use this tree-like structure to create websites. You'll also learn how to apply styling to a website through CSS. You'll learn about CSS syntax, selectors, and units. Along the way, you'll also learn about code editors and a browser's Developer Tools."
-            },
-            "126767f5-3277-42ad-b874-76d043z089ca": {"_ownerId": "847ec027-f679-4087-8033-5173a2f9c93a",
-                "_id": 23, 
-            "name": "Second",
-            "numParticipants": 13,
-            "duration": 26,
-            "rating": 4.6,
-            "price": 109,
-            "image": "https://test2.damakaro.bg/wp-content/uploads/2022/07/course-4.jpg",
-            "text": "Our Advanced Search Engine Optimization course will transform you into a full-stack SEO professional driving sustained growth in your website’s most critical marketing channel. You will master the many facets of SEO like keyword research, technical SEO, link building, analytics, and much more with this SEO training course."
-            }
-        
         }
     };
     var rules$1 = {
