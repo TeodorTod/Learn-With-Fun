@@ -1,11 +1,12 @@
 import * as homeworkService from '../../services/homeworkService';
+import { HomeworksContext } from '../../contexts/HomeworksContext';
+import { useContext } from 'react';
 import './Homeworks.css';
 import SingleHomework from './SingleHomework/SingleHomework';
 
-const Homeworks = ({
-    homeworks,
-    addHomeworkHandler
-}) => {
+const Homeworks = ({homeworks}) => {
+    const {addHomeworkHandler} = useContext(HomeworksContext);
+
     const onSubmit = (e) => {
         e.preventDefault();
 
@@ -14,7 +15,9 @@ const Homeworks = ({
         homeworkService.create(homeworkData)
             .then(result => {
                 addHomeworkHandler(homeworkData);
-            })
+            });
+
+            e.target.reset();
     }
     
     return (

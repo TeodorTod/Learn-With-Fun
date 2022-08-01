@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { AuthContext } from './contexts/AuthContext';
 import { CoursesContext } from './contexts/CoursesContext';
+import { HomeworksContext } from './contexts/HomeworksContext';
 import './App.css';
 
 import * as courseService from "./services/courseService";
@@ -81,21 +82,25 @@ function App() {
                     <Header />
                     <main id='main'>
 
-                        <Routes>
-                            <Route path="/" element={<Home data={data} />} />
-                            <Route path="/about" element={<About />} />
-                            <Route path="/courses" element={<AllCorses />} />
-                            <Route path="/my-courses" element={<MyCourses myCourse={myCourse}/>} />
-                            <Route path="/homeworks" element={<Homeworks homeworks={homeworks} addHomeworkHandler={addHomeworkHandler}/>} />
-                            <Route path='/teachers' element={<Teachers />} />
-                            <Route path='/contact' element={<Contact />} />
-                            <Route path='/sendMessage' element={<SendMessage />} />
-                            <Route path="/login" element={<Login />} />
-                            <Route path="/register" element={<Register />} />
-                            <Route path="/logout" element={<Logout />} />
-                            <Route path='/details/:courseId' element={<Details />} />
-                            <Route path="*" element={<NotFound />} />
-                        </Routes>
+                        <HomeworksContext.Provider value={{ homeworks, addHomeworkHandler }}>
+
+                            <Routes>
+                                <Route path="/" element={<Home data={data} />} />
+                                <Route path="/about" element={<About />} />
+                                <Route path="/courses" element={<AllCorses />} />
+                                <Route path="/my-courses" element={<MyCourses myCourse={myCourse} />} />
+                                <Route path="/homeworks" element={<Homeworks homeworks={homeworks} />} />
+                                <Route path='/teachers' element={<Teachers />} />
+                                <Route path='/contact' element={<Contact />} />
+                                <Route path='/sendMessage' element={<SendMessage />} />
+                                <Route path="/login" element={<Login />} />
+                                <Route path="/register" element={<Register />} />
+                                <Route path="/logout" element={<Logout />} />
+                                <Route path='/details/:courseId' element={<Details />} />
+                                <Route path="*" element={<NotFound />} />
+                            </Routes>
+
+                        </HomeworksContext.Provider>
 
                     </main>
                     <Footer />
