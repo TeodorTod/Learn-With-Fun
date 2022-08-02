@@ -1,6 +1,10 @@
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "./SingleHomework.css"
 
 const SingleHomework = ({homework}) => {
+    const navigate = useNavigate();
+
+
     return (
         <div className="container-fluid py-5">
         <div className="container py-5">
@@ -17,7 +21,7 @@ const SingleHomework = ({homework}) => {
                     </div>
                     <p>Message: {homework.message}</p>
                     <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button">Details</button>
-                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button">Edit</button>
+                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button" onClick={() => navigate(`/homeworks/${homework._id}/edit`)}>Edit</button>
                     <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button">Comment</button>
                     <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button">Delete</button>
                 </div>

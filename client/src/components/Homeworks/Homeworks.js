@@ -8,7 +8,7 @@ const Homeworks = ({homeworks}) => {
     const {addHomeworkHandler} = useContext(HomeworksContext);
 
     const onSubmit = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
         const homeworkData = Object.fromEntries(new FormData(e.currentTarget));
 

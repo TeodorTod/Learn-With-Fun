@@ -26,6 +26,7 @@ import MyCourses from './components/MyCourses/MyCourses';
 import NotFound from './components/NotFound/NotFound';
 import Details from './components/Details/Details';
 import Logout from './components/Logout/Logout';
+import EditHomework from './components/EditHomework/EditHomework';
 
 
 
@@ -71,7 +72,10 @@ function App() {
                 _id: uniqid()
             }
         ])
+    };
 
+    const homeworkEdit = (homeworkId, homeworkData) => {
+        setHomeworks(state => state.map(x => x._id == homeworkId ? homeworkData : x));
     };
 
 
@@ -82,7 +86,7 @@ function App() {
                     <Header />
                     <main id='main'>
 
-                        <HomeworksContext.Provider value={{ homeworks, addHomeworkHandler }}>
+                        <HomeworksContext.Provider value={{ homeworks, addHomeworkHandler, homeworkEdit }}>
 
                             <Routes>
                                 <Route path="/" element={<Home data={data} />} />
@@ -97,6 +101,7 @@ function App() {
                                 <Route path="/register" element={<Register />} />
                                 <Route path="/logout" element={<Logout />} />
                                 <Route path='/details/:courseId' element={<Details />} />
+                                <Route path='/homeworks/:homeworkId/edit' element={<EditHomework />} />
                                 <Route path="*" element={<NotFound />} />
                             </Routes>
 
