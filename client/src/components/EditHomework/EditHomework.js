@@ -25,7 +25,7 @@ const EditHomework = () => {
         homeworkService.edit(homeworkId, homeworkData)
             .then(result => {
                 homeworkEdit(homeworkId, result);
-                navigate(`/homeworks/${result._id}}`)
+                navigate(`/homeworks/`)
             });
     };
 
