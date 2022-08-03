@@ -42,27 +42,32 @@ const EditHomework = () => {
                             <div id="success"></div>
                             <form name="editMessage" id="contactForm" noValidate="novalidate" onSubmit={onSubmit}>
                                 <div className="control-group">
+                                    <h3 className="names">Name</h3>
                                     <input type="text" className="form-control border-0 p-4" id="name" name='name' defaultValue={currentHomework.name} />
                                     <p className="help-block text-danger"></p>
                                 </div>
                                 <div className="control-group">
+                                <h3 className="names">Course</h3>
                                     <input type="text" className="form-control border-0 p-4" id="subject" name='course' defaultValue={currentHomework.course}/>
                                     <p className="help-block text-danger"></p>
                                 </div>
                                 <div className="control-group">
+                                <h3 className="names">Lesson</h3>
                                     <input type="text" className="form-control border-0 p-4" id="subject" name='lesson' defaultValue={currentHomework.lesson}/>
                                     <p className="help-block text-danger"></p>
                                 </div>
                                 <div className="control-group">
+                                <h3 className="names">GitHub Link</h3>
                                     <input type="text" className="form-control border-0 p-4" id="link" name='link' defaultValue={currentHomework.link}/>
                                     <p className="help-block text-danger"></p>
                                 </div>
                                 <div className="control-group">
+                                <h3 className="names">Message</h3>
                                     <textarea className="form-control border-0 py-3 px-4" rows="5" id="message" name='message' defaultValue={currentHomework.message}></textarea>
                                     <p className="help-block text-danger"></p>
                                 </div>
                                 <div className="text-center">
-                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Edit</button>
+                                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Save</button>
                                 </div>
                             </form>
                         </div>
