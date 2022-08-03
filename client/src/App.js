@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 
-import { AuthContext } from './contexts/AuthContext';
 import { CoursesContext } from './contexts/CoursesContext';
 import { HomeworksContext } from './contexts/HomeworksContext';
+import { AuthProvider } from './contexts/AuthContext';
 import './App.css';
 
 import * as courseService from "./services/courseService";
 import * as homeworkService from './services/homeworkService';
-import useLocalStorage from './hooks/useLocalStorage';
 import uniqid from 'uniqid';
 
 import Header from "./components/Header/Header";
@@ -33,7 +32,6 @@ import EditHomework from './components/EditHomework/EditHomework';
 function App() {
     const [data, setData] = useState([]);
     const [myCourse, setMyCourse] = useState(null);
-    const [user, setUser] = useLocalStorage('user', {});
     const [homeworks, setHomeworks] = useState([]);
 
 
@@ -51,19 +49,6 @@ function App() {
             });
     }, []);
 
-
-    const login = (authData) => {
-        setUser(authData);
-    };
-
-    const register = (authData) => {
-        setUser(authData);
-    };
-
-    const logout = () => {
-        setUser({});
-    };
-
     const addHomeworkHandler = (homeworkData) => {
         setHomeworks(state => [
             ...state,
@@ -80,7 +65,7 @@ function App() {
 
 
     return (
-        <AuthContext.Provider value={{ user: user, login, register, logout }}>
+       <AuthProvider>
             <CoursesContext.Provider value={{ data, setMyCourse }}>
                 <div>
                     <Header />
@@ -111,7 +96,7 @@ function App() {
                     <Footer />
                 </div>
             </CoursesContext.Provider>
-        </AuthContext.Provider>
+        </AuthProvider>
     );
 }
 
