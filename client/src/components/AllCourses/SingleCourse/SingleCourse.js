@@ -8,6 +8,8 @@ import './SingleCourse.css';
 export default function SingleCourse() {
     const { data, setMyCourse } = useContext(CoursesContext);
     const { user } = useContext(AuthContext);
+
+    let confirmation;    
     return (
         <>
             {data != null
@@ -27,7 +29,7 @@ export default function SingleCourse() {
                                         </div>
                                         <Link to={`/details/${x._id}`} className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn'>Details</Link>
                                         {user.email
-                                            ? <Link to={'/my-courses'} onClick={(e) => setMyCourse(x)} className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</Link>
+                                            ? <Link to={'/my-courses'} onClick={(e) => {confirmation = window.confirm('Are you sure you want to apply to this course?'); if (confirmation) {setMyCourse(x)} }} className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</Link>
                                             : ''
                                         }
                                     </div>
