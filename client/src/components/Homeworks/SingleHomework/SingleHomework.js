@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import * as homeworkService from '../../../services/homeworkService';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { HomeworksContext } from "../../../contexts/HomeworksContext";
 import "./SingleHomework.css"
 
@@ -10,6 +10,7 @@ const SingleHomework = ({homework}) => {
     const navigate = useNavigate();
     const { homeworkId } = useParams();
     const { homeworkDelete } = useContext(HomeworksContext);
+    const [likes, setLikes] = useState(0);
 
     const onDelete = (e) => {
         const confirmation = window.confirm('Are you sure you want to delete this homework?');
@@ -21,6 +22,18 @@ const SingleHomework = ({homework}) => {
             })  
         }
     }
+
+    const Like = (e) => {
+        setLikes(state => state + 1);
+        e.target.style.display = 'none';
+    };
+
+    const Dislike = (e) => {
+        setLikes(state => state - 1);
+        e.target.style.display = 'none';
+    };
+
+
 
     return (
         <div className="container-fluid py-5">
@@ -35,11 +48,12 @@ const SingleHomework = ({homework}) => {
                         <h2>Name: {homework.name}</h2>
                         <h2>Lesson: {homework.lesson}</h2>
                         <h3>GitHub link: <a href={homework.link} target="_blank">{homework.link}</a></h3>
+                        <h3>Likes: {likes}</h3>
                     </div>
                     <p>Message: {homework.message}</p>
-                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button">Details</button>
+                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button" onClick={Like}>Like</button>
+                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button" onClick={Dislike}>Dislike</button>
                     <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button" onClick={() => navigate(`/homeworks/${homework._id}/edit`)}>Edit</button>
-                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button">Comment</button>
                     <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button" onClick={onDelete}>Delete</button>
                 </div>
             </div>
