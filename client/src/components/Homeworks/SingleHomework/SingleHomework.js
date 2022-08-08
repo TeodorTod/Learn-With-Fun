@@ -1,9 +1,26 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
+import * as homeworkService from '../../../services/homeworkService';
+import { useContext } from "react";
+import { HomeworksContext } from "../../../contexts/HomeworksContext";
 import "./SingleHomework.css"
+
+
 
 const SingleHomework = ({homework}) => {
     const navigate = useNavigate();
+    const { homeworkId } = useParams();
+    const { homeworkDelete } = useContext(HomeworksContext);
 
+    const onDelete = (e) => {
+        const confirmation = window.confirm('Are you sure you want to delete this homework?');
+
+        if (confirmation) {
+            homeworkService.remove(homework._id)
+            .then(() => {
+                homeworkDelete(homework._id);
+            })  
+        }
+    }
 
     return (
         <div className="container-fluid py-5">
@@ -23,7 +40,7 @@ const SingleHomework = ({homework}) => {
                     <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button">Details</button>
                     <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button" onClick={() => navigate(`/homeworks/${homework._id}/edit`)}>Edit</button>
                     <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button">Comment</button>
-                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button">Delete</button>
+                    <button className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="hm-button" onClick={onDelete}>Delete</button>
                 </div>
             </div>
         </div>

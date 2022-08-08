@@ -8,4 +8,6 @@ export const getOne = (homeworkId) => request.get(`${baseUrl}/${homeworkId}`);
 
 export const create = (homeworkData) => request.post(baseUrl, homeworkData);
 
+export const remove = (homeworkId) => request.del(`${baseUrl}/${homeworkId}`);
+
 export const edit = (homeworkId, homeworkData) => request.put(`${baseUrl}/${homeworkId}`, homeworkData);

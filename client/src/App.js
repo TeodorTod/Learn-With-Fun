@@ -63,6 +63,9 @@ function App() {
         setHomeworks(state => state.map(x => x._id == homeworkId ? homeworkData : x));
     };
 
+    const homeworkDelete = (homeworkId) => {
+        setHomeworks(state => state.filter(x => x._id !== homeworkId))
+    }
 
     return (
        <AuthProvider>
@@ -71,7 +74,7 @@ function App() {
                     <Header />
                     <main id='main'>
 
-                        <HomeworksContext.Provider value={{ homeworks, addHomeworkHandler, homeworkEdit }}>
+                        <HomeworksContext.Provider value={{ homeworks, addHomeworkHandler, homeworkEdit, homeworkDelete }}>
 
                             <Routes>
                                 <Route path="/" element={<Home data={data} />} />

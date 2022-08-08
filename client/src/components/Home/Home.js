@@ -59,7 +59,7 @@ const Home = ({
 
             <div className="container-fluid py-5">
                 <div className="text-center mb-5">
-                    <h1>Explore Top Courses</h1>
+                    <h1>Explore Our Top Courses</h1>
                 </div>
                 {newData != undefined && newData.slice(0, 3).map(x =>
                     <div key={x._id} className="container pt-5 pb-3">
