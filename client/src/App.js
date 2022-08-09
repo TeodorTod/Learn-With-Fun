@@ -33,7 +33,7 @@ function App() {
     const [data, setData] = useState([]);
     const [myCourse, setMyCourse] = useState(null);
     const [homeworks, setHomeworks] = useState([]);
-
+    const [likes, setLikes] = useState(0);
 
     useEffect(() => {
         courseService.getAll()
@@ -69,7 +69,7 @@ function App() {
 
     return (
        <AuthProvider>
-            <CoursesContext.Provider value={{ data, setMyCourse }}>
+            <CoursesContext.Provider value={{ data, setMyCourse, likes, setLikes }}>
                 <div>
                     <Header />
                     <main id='main'>

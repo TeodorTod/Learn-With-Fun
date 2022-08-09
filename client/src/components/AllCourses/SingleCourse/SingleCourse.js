@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CoursesContext } from "../../../contexts/CoursesContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 
 import './SingleCourse.css';
@@ -8,8 +8,9 @@ import './SingleCourse.css';
 export default function SingleCourse() {
     const { data, setMyCourse } = useContext(CoursesContext);
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
 
-    let confirmation;    
+    let confirmation = false;
     return (
         <>
             {data != null
@@ -29,7 +30,17 @@ export default function SingleCourse() {
                                         </div>
                                         <Link to={`/details/${x._id}`} className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id='details-btn'>Details</Link>
                                         {user.email
-                                            ? <Link to={'/my-courses'} onClick={(e) => {confirmation = window.confirm('Are you sure you want to apply to this course?'); if (confirmation) {setMyCourse(x)} }} className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Apply</Link>
+                                            ? <button
+                                                onClick={(e) => {
+                                                    confirmation = window.confirm('Are you sure you want to apply to this course?');
+                                                    if (confirmation) {
+                                                        setMyCourse(x);
+                                                        navigate('/my-courses');
+                                                        e.target.style.display = 'none'
+                                                    }
+                                                }} className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">
+                                                Apply
+                                            </button>
                                             : ''
                                         }
                                     </div>

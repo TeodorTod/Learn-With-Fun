@@ -2,15 +2,16 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import * as homeworkService from '../../../services/homeworkService';
 import { useContext, useState } from "react";
 import { HomeworksContext } from "../../../contexts/HomeworksContext";
+import { CoursesContext } from "../../../contexts/CoursesContext";
 import "./SingleHomework.css"
 
 
 
 const SingleHomework = ({homework}) => {
     const navigate = useNavigate();
-    const { homeworkId } = useParams();
     const { homeworkDelete } = useContext(HomeworksContext);
-    const [likes, setLikes] = useState(0);
+    const { likes, setLikes } = useContext(CoursesContext)
+    
 
     const onDelete = (e) => {
         const confirmation = window.confirm('Are you sure you want to delete this homework?');
