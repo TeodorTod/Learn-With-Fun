@@ -11,8 +11,12 @@ const Logout = () => {
     useEffect(() => {
         authService.logout(user.accessToken)
             .then(() => {
-                logout();
-                navigate('/');
+                const confirmation = window.confirm('Are you sure you want to logout?');
+                navigate('/')
+                if (confirmation) {
+                    logout();
+                    navigate('/');
+                }
             })
             .catch(() => {
                 navigate('/');
