@@ -8,6 +8,8 @@ import './App.css';
 
 import * as courseService from "./services/courseService";
 import * as homeworkService from './services/homeworkService';
+
+import PrivateRoute from './components/common/PrivateRoute';
 import uniqid from 'uniqid';
 
 import Header from "./components/Header/Header";
@@ -80,8 +82,8 @@ function App() {
                                 <Route path="/" element={<Home data={data} />} />
                                 <Route path="/about" element={<About />} />
                                 <Route path="/courses" element={<AllCorses />} />
-                                <Route path="/my-courses" element={<MyCourses myCourse={myCourse} />} />
-                                <Route path="/homeworks" element={<Homeworks homeworks={homeworks} />} />
+                                <Route path="/my-courses" element={<PrivateRoute><MyCourses myCourse={myCourse} /></PrivateRoute>} />
+                                <Route path="/homeworks" element={<PrivateRoute><Homeworks homeworks={homeworks} /></PrivateRoute>} />
                                 <Route path='/teachers' element={<Teachers />} />
                                 <Route path='/contact' element={<Contact />} />
                                 <Route path='/sendMessage' element={<SendMessage />} />
@@ -89,7 +91,7 @@ function App() {
                                 <Route path="/register" element={<Register />} />
                                 <Route path="/logout" element={<Logout />} />
                                 <Route path='/details/:courseId' element={<Details />} />
-                                <Route path='/homeworks/:homeworkId/edit' element={<EditHomework />} />
+                                <Route path='/homeworks/:homeworkId/edit' element={<PrivateRoute><EditHomework /></PrivateRoute>} />
                                 <Route path="*" element={<NotFound />} />
                             </Routes>
 
