@@ -18,7 +18,6 @@ The training is completely innovative, with many practical tasks and is directed
     </div>
 <p>
 
-<hr/>
     <h2 align="center">The repo includes the "<i>back-end</i>" and the "<i>front-end</i>" of the app.</h2>
 <hr/>
 
@@ -27,3 +26,31 @@ The training is completely innovative, with many practical tasks and is directed
 <hr/>
 <h3>For client side is used template from HTML Codex, but some of the pages are custom created</h3>
 <h4>To start: run npm start</h4>
+
+<hr/>
+
+Used features of the platform
+
+<hr/>
+
+- <i><b>Responsive Design</b></i>
+- <i><b>Home page with carousel and top courses</b></i>
+- <i><b>Authentication (Register, Login)</b></i>
+- <i><b>Add questions</b></i>
+- <i><b>Details for all courses</b></i>
+- <i><b>Apply for chosen course(register users only)</b></i>
+- <i><b>Add homework(register users only)</b></i>
+- <i><b>Update homework (owner only)</b></i>
+- <i><b>Delete homework (owner only)</b></i>
+- <i><b>Like homework(register user, but not owner)</b></i>
+- <i><b>Unlike homework(register user, but not owner)</b></i>
+- <i><b>-</b></i>
+
+<hr/>
+
+Dependencies, (besides Create-React-App deps): 
+
+- React Router v6
+- uniqid
+- react-bootstrap
+- 
