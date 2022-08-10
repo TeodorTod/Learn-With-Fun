@@ -18,7 +18,7 @@ The training is completely innovative, with many practical tasks and is directed
     </div>
 <p>
 
-   The repo includes the "<i>back-end</i>" and the "<i>front-end</i>" of the app.
+   <h2 align="center">The repo includes the "<i>back-end</i>" and the "<i>front-end</i>" of the app.</h2>
 <hr/>
 
 <h3>For server side is used SoftUni Practice Server with some corrections</h3>
