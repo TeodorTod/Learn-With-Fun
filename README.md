@@ -18,4 +18,8 @@ The training is completely innovative, with many practical tasks and is directed
     </div>
 <p>
 
-<hr/>
+<h2 align="center">For server side is used SoftUni Practice Server with some corrections</h2>
+<h3 align="center">To start: run node server.js</h3>
+
+<h2 align="center">For client side is used template from HTML Codex, but some of the pages are custom created</h2>
+<h3 align="center">To start: run npm start</h3>
