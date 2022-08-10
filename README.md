@@ -9,13 +9,13 @@ The training is completely innovative, with many practical tasks and is directed
     <div>
     <img src="./home.png"/>
     <hr/>
-    <!-- <img src="./categories.png"/>
+    <img src="./about.png"/>
     <hr/>
-    <img src="./auth.png"/>
+    <img src="./teachers.png"/>
     <hr/>
-    <img src="./listing.png"/>
+    <img src="./courses.png"/>
     <hr/>
-    </div> -->
+    </div>
 <p>
 
 <hr/>
