@@ -29,9 +29,7 @@ The training is completely innovative, with many practical tasks and is directed
 
 <hr/>
 
-Used features of the platform
-
-<hr/>
+Used features of the platform:
 
 - <i><b>Responsive Design</b></i>
 - <i><b>Home page with carousel and top courses</b></i>
@@ -53,4 +51,4 @@ Dependencies, (besides Create-React-App deps):
 - React Router v6
 - uniqid
 - react-bootstrap
-- 
+
