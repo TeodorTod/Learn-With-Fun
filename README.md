@@ -21,10 +21,10 @@ The training is completely innovative, with many practical tasks and is directed
    <h2 align="center">The repo includes the "<i>back-end</i>" and the "<i>front-end</i>" of the app.</h2>
 <hr/>
 
-<h3>For server side is used SoftUni Practice Server with some corrections</h3>
+<h3>For server side is used SoftUni Practice Server with some corrections.</h3>
 <h4>To start: run node server.js</h4>
 <hr/>
-<h3>For client side is used template from HTML Codex, but some of the pages are custom created</h3>
+<h3>For client side is used template from HTML Codex, but some of the pages and elements are custom created.</h3>
 <h4>To start: run npm start</h4>
 
 <hr/>
@@ -42,7 +42,6 @@ Used features of the platform:
 - <i><b>Delete homework (owner only)</b></i>
 - <i><b>Like homework(register user, but not owner)</b></i>
 - <i><b>Unlike homework(register user, but not owner)</b></i>
-- <i><b>-</b></i>
 
 <hr/>
 
